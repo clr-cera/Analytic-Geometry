@@ -29,24 +29,5 @@ double* vecprod(double* vec1, double* vec2){
 }
 
 double module(double* vec){
-  double result = 0;
-
-  for (int i = 0; i < 3; i++){
-    result +=pow(vec[i],2);
-  }
-  result = sqrt(result);
-
-  return (result);
+  return (sqrt(innerprod(vec,vec)));
 }
-
-
-
-
-
-
-
-
-
-
-
-
