@@ -1,14 +1,14 @@
 #include <math.h>
 
 /*Functions*/
-double sclprod(double *vec1, double *vec2);
+double innerprod(double *vec1, double *vec2);
 
 double module(double *vec);
 
 typedef double vector3[3];
 
 
-double sclprod(double* vec1, double* vec2){
+double innerprod(double* vec1, double* vec2){
   double result = 0;
 
   for (int i = 0; i < 3; i++){
