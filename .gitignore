@@ -1,2 +1,2 @@
 # This is the gitignore for Analytic Geometry
-test.c
+/test.c
