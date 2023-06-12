@@ -8,6 +8,8 @@ double module(double *vec);
 
 double pointDistance(double *p1, double *p2);
 
+double* vecprod(double *vec1, double *vec2);
+
 typedef double vector3[3];
 
 typedef double point3[3];
