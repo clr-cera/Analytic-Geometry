@@ -1,4 +1,5 @@
 #include <math.h>
+#include <stdlib.h>
 
 /*Functions*/
 double innerprod(double *vec1, double *vec2);
@@ -22,11 +23,12 @@ double innerprod(vector3 vec1, vector3 vec2){
 }
 
 double* vecprod(vector3 vec1, vector3 vec2){
-  double* result; 
+  double* result;
+  result  = (double *) calloc(3, sizeof("double"));
 
-
-
-
+  result[0] = (vec1[1] * vec2[2]) - (vec1[2] * vec2[1]);
+  result[1] = (vec1[2] * vec2[0]) - (vec1[0] * vec2[2]);
+  result[2] = (vec1[0] * vec2[1]) - (vec1[1] * vec2[0]);
 
   return result;
 }
