@@ -101,7 +101,17 @@ double* Proj(vector3 vec1, vector3 vec2){ //Takes two vectors
   return (result); //Returns a vector
 }
 
-
+//tests if any given 3 vectors are orthonormal or not, returns 1 if they are and 0 if they are not
+int IsOrthonormal(vector3 vec1, vector3 vec2)
+{
+  if(Module(vec1) != 1) //Module of first vector must be 1
+    return 0;
+  if(Module(vec2) != 1  //Module of second vector must also be 1
+     return 0;
+  if(InnerProd(vec1, vec2) != 0)  //Dot product of both vectors must be 0
+     return 0;
+  return 1; //If all tests fail, it means they are indeed orthonormal, thus 1 is returned
+}
 
 
 
