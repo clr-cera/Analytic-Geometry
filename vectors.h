@@ -16,6 +16,8 @@ double* ProdByScalar(double *vec, double scalar);
 
 double* Proj(double *vec1, double *vec2);
 
+int IsOrthonormal(double *vec1, double *vec2);
+
 /*Type definitions*/
 typedef double vector3[3];
 
@@ -101,12 +103,12 @@ double* Proj(vector3 vec1, vector3 vec2){ //Takes two vectors
   return (result); //Returns a vector
 }
 
-//tests if any given 3 vectors are orthonormal or not, returns 1 if they are and 0 if they are not
-int IsOrthonormal(vector3 vec1, vector3 vec2)
+//tests if any given 2 vectors are orthonormal or not, returns 1 if they are and 0 if they are not
+int IsOrthonormal(vector3 vec1, vector3 vec2) //Takes two vectors
 {
   if(Module(vec1) != 1) //Module of first vector must be 1
     return 0;
-  if(Module(vec2) != 1  //Module of second vector must also be 1
+  if(Module(vec2) != 1)  //Module of second vector must also be 1
      return 0;
   if(InnerProd(vec1, vec2) != 0)  //Dot product of both vectors must be 0
      return 0;
